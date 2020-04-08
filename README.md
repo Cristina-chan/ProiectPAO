@@ -3,12 +3,12 @@
   Proiect 7. Vanzare de bilete online(client, eveniment, locatie)
 
   Obiecte:
-User -> Client / Organizator
-Card bancar
-Eveniment
-Locatie
-Bilet
-Reducere
+- User -> Client / Organizator
+- Card bancar
+- Eveniment
+- Locatie
+- Bilet
+- Reducere
 
   Actiuni:
 - inregistrare in aplicatie
