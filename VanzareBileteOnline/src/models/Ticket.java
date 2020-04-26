@@ -4,6 +4,7 @@ public class Ticket {
 
     private int id;
     private String event;
+    private String tip;
     private double price;
 
     public Ticket(int id, String event, double price) {

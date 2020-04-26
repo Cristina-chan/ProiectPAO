@@ -13,6 +13,7 @@
   Actiuni:
 - inregistrare in aplicatie
 - login in aplicatie
+- afisare evenimente
 - cauta eveniment
 - rezerva bilet
 - plateste bilet online

@@ -1,24 +1,29 @@
 package services;
 
+import models.Client;
+import models.Organizer;
 import models.User;
-import repositories.UserRepository;
+import repositories.ClientRepository;
+import repositories.OrganizerRepository;
 
 import java.util.Optional;
 
 public class LoginService {
 
-    private UserRepository userRepository;
+    private ClientRepository clientRepository;
+    private OrganizerRepository organizerRepository;
 
     private LoginService() {
-        userRepository = UserRepository.build(UserRepository.Type.COLLECTION);
+        clientRepository = ClientRepository.build(ClientRepository.Type.COLLECTION);
+        organizerRepository = OrganizerRepository.build(OrganizerRepository.Type.COLLECTION);
     }
 
-    public boolean login(User user) {
-        Optional<User> u = userRepository.findUserByUsername(user.getUsername());
+    public boolean login(Client client) {
+        Optional<Client> c = clientRepository.findClientByUsername(client.getUsername());
 
-        if (u.isPresent()) {
-            User usr = u.get();
-            if (usr.getPassword().equals(user.getPassword())) {
+        if (c.isPresent()) {
+            Client cl = c.get();
+            if (cl.getPassword().equals(client.getPassword())) {
                 return true;
             }
         }
@@ -26,8 +31,25 @@ public class LoginService {
         return false;
     }
 
-    public void register(User user) {
-        userRepository.addUser(user);
+    public boolean login(Organizer organizer) {
+        Optional<Organizer> o = organizerRepository.findOrganizerByUsername(organizer.getUsername());
+
+        if (o.isPresent()) {
+            Organizer org = o.get();
+            if (org.getPassword().equals(organizer.getPassword())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void register(Client client) {
+        clientRepository.addClient(client);
+    }
+
+    public void register(Organizer organizer) {
+        organizerRepository.addOrganizer(organizer);
     }
 
     public static LoginService getInstance() {

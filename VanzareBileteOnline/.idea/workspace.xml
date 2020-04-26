@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8794adf8-e59c-4b25-b089-65e0db07ac60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/ProiectPAO.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionOrganizerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/FileClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/FileOrganizerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/OrganizerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/EventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/TicketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Organizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/UserRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/LoginService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +89,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="227" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587900523778" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587937927634">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587937927634" />
     <state width="724" height="213" key="GridCell.Tab.0.bottom" timestamp="1586376182294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

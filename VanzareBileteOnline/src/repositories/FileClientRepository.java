@@ -1,7 +1,7 @@
 package repositories;
 
 import exceptions.InexistentFileException;
-import models.User;
+import models.Client;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -10,23 +10,23 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 
-public class FileUserRepository implements UserRepository {
+public class FileClientRepository implements ClientRepository {
 
-    private final String file = "Users.csv";
+    private final String file = "Clients.csv";
 
     @Override
-    public void addUser(User user) {
+    public void addClient(Client client) {
         try (PrintStream out = new PrintStream(file)) {
-            out.println(user.getId() + "," + user.getUsername() + "," + user.getPassword());
+            out.println(client.getId() + "," + client.getUsername() + "," + client.getPassword() + "," + client.getAccountNumber() + ","  + client.getDiscount());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public Optional<User> findUserByUsername(String username) {
+    public Optional<Client> findClientByUsername(String username) {
         Path path = Paths.get(file);
-        User user = null;
+        Client client = null;
 
         try {
             if (!Files.exists(path)) {
@@ -37,10 +37,12 @@ public class FileUserRepository implements UserRepository {
             for (String u : list) {
                 String[] attr = u.split(",");
                 if (attr[1].equals(username)) {
-                    user = new User();
-                    user.setId(Integer.parseInt(attr[0]));
-                    user.setUsername(attr[1]);
-                    user.setPassword(attr[2]);
+                    client = new Client();
+                    client.setId(Integer.parseInt(attr[0]));
+                    client.setUsername(attr[1]);
+                    client.setPassword(attr[2]);
+                    client.setAccountNumber(attr[3]);
+
                     break;
                 }
             }
@@ -48,6 +50,6 @@ public class FileUserRepository implements UserRepository {
             e.printStackTrace();
         }
 
-        return Optional.ofNullable(user);
+        return Optional.ofNullable(client);
     }
 }

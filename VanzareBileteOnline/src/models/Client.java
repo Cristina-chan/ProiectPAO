@@ -1,10 +1,17 @@
 package models;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Client extends User {
 
     private String accountNumber;
     private Discount discount;
-    private Ticket[] boughtTickets;
+    private Map<Ticket, Status> tickets;
+
+    enum Status {
+        Reserved, Bought
+    }
 
     public Client() {
     }
@@ -13,7 +20,7 @@ public class Client extends User {
         super(id, username, password);
         this.accountNumber = accountNumber;
         this.discount = new Discount(0);
-        this.boughtTickets = new Ticket[20];
+        this.tickets = new HashMap<>();
     }
 
     public String getAccountNumber() {
@@ -30,5 +37,13 @@ public class Client extends User {
 
     public void setDiscount(Discount discount) {
         this.discount = discount;
+    }
+
+    public void addTicket(Ticket ticket) {
+        tickets.put(ticket, Status.Reserved);
+    }
+
+    public void boughtTicket(Ticket ticket) {
+        tickets.put(ticket, Status.Bought);
     }
 }

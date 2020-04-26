@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Date;
+import java.util.Map;
 
 public class Event {
 
@@ -9,7 +10,7 @@ public class Event {
     private Date date;
     private Location location;
     private int numberOfTickets;
-    private Ticket[] tickets;
+    private Map<Ticket, Integer> tickets;
 
     public Event() {
     }
@@ -20,7 +21,6 @@ public class Event {
         this.date = date;
         this.location = location;
         this.numberOfTickets = numberOfTickets;
-        this.tickets = new Ticket[20];
     }
 
     public int getId() {
