@@ -4,6 +4,9 @@ public class Location {
 
     private String locationName;
 
+    public Location() {
+    }
+
     public Location(String locationName) {
         this.locationName = locationName;
     }

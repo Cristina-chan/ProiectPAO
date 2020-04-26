@@ -7,13 +7,20 @@ public class Event {
     private int id;
     private String name;
     private Date date;
-    private int numberOfPlaces;
+    private Location location;
+    private int numberOfTickets;
+    private Ticket[] tickets;
 
-    public Event(int id, String name, Date date, int numberOfPlaces) {
+    public Event() {
+    }
+
+    public Event(int id, String name, Date date, Location location, int numberOfTickets) {
         this.id = id;
         this.name = name;
         this.date = date;
-        this.numberOfPlaces = numberOfPlaces;
+        this.location = location;
+        this.numberOfTickets = numberOfTickets;
+        this.tickets = new Ticket[20];
     }
 
     public int getId() {
@@ -40,11 +47,19 @@ public class Event {
         this.date = date;
     }
 
-    public int getNumberOfPlaces() {
-        return numberOfPlaces;
+    public Location getLocation() {
+        return location;
     }
 
-    public void setNumberOfPlaces(int numberOfPlaces) {
-        this.numberOfPlaces = numberOfPlaces;
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public int getNumberOfTickets() {
+        return numberOfTickets;
+    }
+
+    public void setNumberOfTickets(int numberOfTickets) {
+        this.numberOfTickets = numberOfTickets;
     }
 }

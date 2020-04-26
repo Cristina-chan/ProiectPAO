@@ -20,4 +20,5 @@
 - adauga eveniment
 - editeaza eveniment
 - sterge eveniment
+- editeaza utilizator
 
