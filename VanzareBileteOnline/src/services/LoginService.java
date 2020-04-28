@@ -2,20 +2,23 @@ package services;
 
 import models.Client;
 import models.Organizer;
-import models.User;
+import models.Type;
 import repositories.ClientRepository;
 import repositories.OrganizerRepository;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Optional;
 
 public class LoginService {
 
     private ClientRepository clientRepository;
     private OrganizerRepository organizerRepository;
+    private AuditService auditService = AuditService.getInstance();
 
     private LoginService() {
-        clientRepository = ClientRepository.build(ClientRepository.Type.COLLECTION);
-        organizerRepository = OrganizerRepository.build(OrganizerRepository.Type.COLLECTION);
+        clientRepository = ClientRepository.build(Type.FILE);
+        organizerRepository = OrganizerRepository.build(Type.FILE);
     }
 
     public boolean login(Client client) {
@@ -24,6 +27,7 @@ public class LoginService {
         if (c.isPresent()) {
             Client cl = c.get();
             if (cl.getPassword().equals(client.getPassword())) {
+                auditService.addAction("login_client", new Timestamp(new Date().getTime()));
                 return true;
             }
         }
@@ -37,6 +41,7 @@ public class LoginService {
         if (o.isPresent()) {
             Organizer org = o.get();
             if (org.getPassword().equals(organizer.getPassword())) {
+                auditService.addAction("login_organizator", new Timestamp(new Date().getTime()));
                 return true;
             }
         }
@@ -46,10 +51,12 @@ public class LoginService {
 
     public void register(Client client) {
         clientRepository.addClient(client);
+        auditService.addAction("inregistrare_client", new Timestamp(new Date().getTime()));
     }
 
     public void register(Organizer organizer) {
         organizerRepository.addOrganizer(organizer);
+        auditService.addAction("inregistrare_organizator", new Timestamp(new Date().getTime()));
     }
 
     public static LoginService getInstance() {

@@ -1,26 +1,25 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Client extends User {
 
     private String accountNumber;
     private Discount discount;
-    private Map<Ticket, Status> tickets;
-
-    enum Status {
-        Reserved, Bought
-    }
+    private List<Ticket> tickets;
 
     public Client() {
+        this.tickets = new ArrayList<>();
     }
 
     public Client(int id, String username, String password, String accountNumber) {
         super(id, username, password);
         this.accountNumber = accountNumber;
         this.discount = new Discount(0);
-        this.tickets = new HashMap<>();
+        this.tickets = new ArrayList<>();
     }
 
     public String getAccountNumber() {
@@ -39,11 +38,38 @@ public class Client extends User {
         this.discount = discount;
     }
 
-    public void addTicket(Ticket ticket) {
-        tickets.put(ticket, Status.Reserved);
+    public List<Ticket> getTickets() {
+        return tickets;
     }
 
-    public void boughtTicket(Ticket ticket) {
-        tickets.put(ticket, Status.Bought);
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
+    }
+
+    public void addTicket(Ticket ticket) {
+        tickets.add(ticket);
+    }
+
+    public void payTickey(Ticket ticket) {
+        for (int i = 0; i < tickets.size(); i++) {
+            if (tickets.get(i).getIdTicket() == ticket.getIdTicket() &&
+                tickets.get(i).getIdClient() == ticket.getIdClient()) {
+                ticket.setStatus(Ticket.Status.Bought);
+                tickets.set(i, ticket);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + getId() +
+                ", username='" + getUsername() + '\'' +
+                ", password='" + getPassword() + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", discount=" + discount +
+                ", tickets=" + tickets +
+                '}';
     }
 }

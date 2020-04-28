@@ -1,26 +1,30 @@
 package models;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Map;
+import java.util.List;
 
 public class Event {
 
     private int id;
+    private int idOrganizer;
     private String name;
     private Date date;
     private Location location;
-    private int numberOfTickets;
-    private Map<Ticket, Integer> tickets;
+    private List<TicketType> tickets;
 
     public Event() {
+        this.tickets = new ArrayList<>();
     }
 
-    public Event(int id, String name, Date date, Location location, int numberOfTickets) {
+    public Event(int id, int idOrganizer, String name, Date date, Location location) {
         this.id = id;
+        this.idOrganizer = idOrganizer;
         this.name = name;
         this.date = date;
         this.location = location;
-        this.numberOfTickets = numberOfTickets;
+        this.tickets = new ArrayList<>();
     }
 
     public int getId() {
@@ -29,6 +33,14 @@ public class Event {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdOrganizer() {
+        return idOrganizer;
+    }
+
+    public void setIdOrganizer(int idOrganizer) {
+        this.idOrganizer = idOrganizer;
     }
 
     public String getName() {
@@ -55,11 +67,27 @@ public class Event {
         this.location = location;
     }
 
-    public int getNumberOfTickets() {
-        return numberOfTickets;
+    public List<TicketType> getTickets() {
+        return tickets;
     }
 
-    public void setNumberOfTickets(int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
+    public void setTickets(List<TicketType> tickets) {
+        this.tickets = tickets;
+    }
+
+    public void addTickets(TicketType ticket) {
+        tickets.add(ticket);
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", idOrganizer=" + idOrganizer +
+                ", name='" + name + '\'' +
+                ", date=" + new SimpleDateFormat("dd/MM/yyyy").format(date) +
+                ", location=" + location +
+                ", tickets=" + tickets +
+                '}';
     }
 }

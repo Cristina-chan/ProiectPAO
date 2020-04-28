@@ -2,17 +2,27 @@ package models;
 
 public class Discount {
 
-    private int percentage;
+    private int amount;
 
-    public Discount(int percentage) {
-        this.percentage = percentage;
+    public Discount() {
     }
 
-    public int getPercentage() {
-        return percentage;
+    public Discount(int amount) {
+        this.amount = amount;
     }
 
-    public void setPercentage(int percentage) {
-        this.percentage = percentage;
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Discount{" +
+                "amount=" + amount +
+                '}';
     }
 }

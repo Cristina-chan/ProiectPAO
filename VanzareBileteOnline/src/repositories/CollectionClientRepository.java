@@ -18,6 +18,16 @@ public class CollectionClientRepository implements ClientRepository {
     }
 
     @Override
+    public void editClient(int idClient, Client client) {
+        for (int i = 0; i < clients.size(); i++) {
+            if (clients.get(i).getId() == idClient) {
+                clients.set(i, client);
+                break;
+            }
+        }
+    }
+
+    @Override
     public Optional<Client> findClientByUsername(String username) {
         for (Client c : clients) {
             if (c.getUsername().equals(username)) {

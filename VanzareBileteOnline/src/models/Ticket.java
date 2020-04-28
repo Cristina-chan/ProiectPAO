@@ -2,38 +2,53 @@ package models;
 
 public class Ticket {
 
-    private int id;
-    private String event;
-    private String tip;
-    private double price;
+    private int idTicket;
+    private int idClient;
+    private Status status;
 
-    public Ticket(int id, String event, double price) {
-        this.id = id;
-        this.event = event;
-        this.price = price;
+    public enum Status {
+        Reserved, Bought
     }
 
-    public int getId() {
-        return id;
+    public Ticket() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Ticket(int idTicket, int idClient, Status status) {
+        this.idTicket = idTicket;
+        this.idClient = idClient;
+        this.status = status;
     }
 
-    public String getEvent() {
-        return event;
+    public int getIdTicket() {
+        return idTicket;
     }
 
-    public void setEvent(String event) {
-        this.event = event;
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
     }
 
-    public double getPrice() {
-        return price;
+    public int getIdClient() {
+        return idClient;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "idTicket=" + idTicket +
+                ", idClient=" + idClient +
+                ", status=" + status +
+                '}';
     }
 }

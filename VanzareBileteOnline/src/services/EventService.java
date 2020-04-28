@@ -1,30 +1,37 @@
 package services;
 
-import models.Event;
-import models.Organizer;
+import models.*;
 import repositories.EventRepository;
 import repositories.OrganizerRepository;
+import repositories.TicketTypeRepository;
 
-import java.util.Optional;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class EventService {
 
     private OrganizerRepository organizerRepository;
     private EventRepository eventRepository;
+    private TicketTypeRepository ticketTypeRepository;
+    private AuditService auditService = AuditService.getInstance();
 
     private EventService() {
-        eventRepository = EventRepository.getInstance();
-        organizerRepository = OrganizerRepository.build(OrganizerRepository.Type.COLLECTION);
+        eventRepository = EventRepository.build(Type.FILE);
+        organizerRepository = OrganizerRepository.build(Type.FILE);
+        ticketTypeRepository = TicketTypeRepository.build(Type.FILE);
     }
 
     public void addEvent(Organizer organizer, Event event) {
-        Optional<Organizer> o = organizerRepository.findOrganizerByUsername(organizer.getUsername());
+        organizer.addEvent(event);
+        eventRepository.addEvent(event);
+        auditService.addAction("adaugare_eveniment", new Timestamp(new Date().getTime()));
+    }
 
-        if (o.isPresent()) {
-            Organizer org = o.get();
-            org.addEvent(event);
-            eventRepository.addEvent(event);
-        }
+    public void addTicketsToEvent(Organizer organizer, Event event, TicketType ticket) {
+        event.addTickets(ticket);
+        organizer.addEvent(event);
+        ticketTypeRepository.addTicket(ticket);
+        auditService.addAction("adaugare_bilete_la_eveniment", new Timestamp(new Date().getTime()));
     }
 
     public static EventService getInstance() {
