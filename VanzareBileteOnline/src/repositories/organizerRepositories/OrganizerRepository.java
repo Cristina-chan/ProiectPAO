@@ -1,4 +1,4 @@
-package repositories;
+package repositories.organizerRepositories;
 
 import models.Organizer;
 import models.Type;

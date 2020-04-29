@@ -1,4 +1,4 @@
-package repositories;
+package repositories.bankAccountRepositories;
 
 import models.BankAccount;
 

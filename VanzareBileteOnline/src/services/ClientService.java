@@ -4,8 +4,8 @@ import models.BankAccount;
 import models.Client;
 import models.Discount;
 import models.Type;
-import repositories.BankAccountRepository;
-import repositories.ClientRepository;
+import repositories.bankAccountRepositories.BankAccountRepository;
+import repositories.clientRepositories.ClientRepository;
 
 import java.sql.Timestamp;
 import java.util.Date;

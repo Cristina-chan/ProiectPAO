@@ -2,7 +2,11 @@ package services;
 
 import exceptions.InexistentFileException;
 import models.*;
-import repositories.*;
+import repositories.clientRepositories.ClientRepository;
+import repositories.eventRepositories.EventRepository;
+import repositories.organizerRepositories.OrganizerRepository;
+import repositories.ticketRepositories.TicketRepository;
+import repositories.ticketTypeRepositories.TicketTypeRepository;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,7 +15,6 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ReadFileService {
 

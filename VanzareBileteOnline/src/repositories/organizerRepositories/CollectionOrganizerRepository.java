@@ -1,6 +1,5 @@
-package repositories;
+package repositories.organizerRepositories;
 
-import models.Client;
 import models.Organizer;
 
 import java.util.ArrayList;

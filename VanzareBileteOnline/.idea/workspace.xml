@@ -2,41 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8794adf8-e59c-4b25-b089-65e0db07ac60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/TicketType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/BankAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionBankAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionEventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionTicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/CollectionTicketTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/FileBankAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/FileEventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/FileTicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/FileTicketTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/TicketTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/AuditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ReadFileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Organizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/CollectionClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/FileClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/FileClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/FileOrganizerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/FileOrganizerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/OrganizerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/OrganizerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/BankAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/bankAccountRepositories/BankAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/clientRepositories/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionBankAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/bankAccountRepositories/CollectionBankAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/clientRepositories/CollectionClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/eventRepositories/CollectionEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionOrganizerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/organizerRepositories/CollectionOrganizerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionTicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketRepositories/CollectionTicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/CollectionTicketTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketTypeRepositories/CollectionTicketTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/eventRepositories/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileBankAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/bankAccountRepositories/FileBankAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/clientRepositories/FileClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/eventRepositories/FileEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileOrganizerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/organizerRepositories/FileOrganizerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileTicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketRepositories/FileTicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/FileTicketTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketTypeRepositories/FileTicketTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/OrganizerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/organizerRepositories/OrganizerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketRepositories/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/TicketTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/ticketTypeRepositories/TicketTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/EventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ReadFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ReadFileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TicketService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

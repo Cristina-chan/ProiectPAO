@@ -1,4 +1,4 @@
-package repositories;
+package repositories.organizerRepositories;
 
 import exceptions.InexistentFileException;
 import models.Organizer;

@@ -1,10 +1,10 @@
 package services;
 
 import models.*;
-import repositories.BankAccountRepository;
-import repositories.ClientRepository;
-import repositories.TicketRepository;
-import repositories.TicketTypeRepository;
+import repositories.bankAccountRepositories.BankAccountRepository;
+import repositories.clientRepositories.ClientRepository;
+import repositories.ticketRepositories.TicketRepository;
+import repositories.ticketTypeRepositories.TicketTypeRepository;
 
 import java.sql.Timestamp;
 import java.util.Date;

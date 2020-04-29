@@ -1,6 +1,5 @@
-package repositories;
+package repositories.ticketTypeRepositories;
 
-import models.Ticket;
 import models.TicketType;
 import models.Type;
 

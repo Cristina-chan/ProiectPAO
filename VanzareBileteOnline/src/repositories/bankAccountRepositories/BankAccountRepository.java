@@ -1,10 +1,8 @@
-package repositories;
+package repositories.bankAccountRepositories;
 
 import models.BankAccount;
-import models.Client;
 import models.Type;
 
-import java.util.List;
 import java.util.Optional;
 
 public interface BankAccountRepository {

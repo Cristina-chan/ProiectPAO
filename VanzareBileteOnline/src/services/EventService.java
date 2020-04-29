@@ -1,9 +1,9 @@
 package services;
 
 import models.*;
-import repositories.EventRepository;
-import repositories.OrganizerRepository;
-import repositories.TicketTypeRepository;
+import repositories.eventRepositories.EventRepository;
+import repositories.organizerRepositories.OrganizerRepository;
+import repositories.ticketTypeRepositories.TicketTypeRepository;
 
 import java.sql.Timestamp;
 import java.util.Date;

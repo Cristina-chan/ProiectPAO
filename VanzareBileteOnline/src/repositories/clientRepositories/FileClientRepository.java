@@ -1,10 +1,9 @@
-package repositories;
+package repositories.clientRepositories;
 
 import exceptions.InexistentFileException;
 import models.Client;
 import models.Discount;
 
-import javax.swing.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;

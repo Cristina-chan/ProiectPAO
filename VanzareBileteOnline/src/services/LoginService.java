@@ -3,8 +3,8 @@ package services;
 import models.Client;
 import models.Organizer;
 import models.Type;
-import repositories.ClientRepository;
-import repositories.OrganizerRepository;
+import repositories.clientRepositories.ClientRepository;
+import repositories.organizerRepositories.OrganizerRepository;
 
 import java.sql.Timestamp;
 import java.util.Date;

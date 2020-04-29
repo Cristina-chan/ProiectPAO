@@ -1,11 +1,9 @@
-package repositories;
+package repositories.ticketRepositories;
 
 import models.Ticket;
-import models.TicketType;
 import models.Type;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TicketRepository {
 

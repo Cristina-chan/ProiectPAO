@@ -1,4 +1,4 @@
-package repositories;
+package repositories.ticketTypeRepositories;
 
 import exceptions.InexistentFileException;
 import models.TicketType;

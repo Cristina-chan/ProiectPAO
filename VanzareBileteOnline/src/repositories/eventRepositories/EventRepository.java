@@ -1,4 +1,4 @@
-package repositories;
+package repositories.eventRepositories;
 
 import models.Event;
 import models.Type;
